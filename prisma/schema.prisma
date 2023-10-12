@@ -1,0 +1,21 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = "mongodb://localhost:27017/dailyLife"
+}
+
+model spending {
+  id         String   @id @map("_id")
+  days       String[]
+  every      Int?
+  interval   String
+  isCash     Boolean
+  isOptional Boolean
+  many       Int
+  name       String
+  type       String
+  value      Int
+}
