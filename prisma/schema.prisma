@@ -1,10 +1,9 @@
 generator client {
   provider = "prisma-client-js"
 }
-
 datasource db {
   provider = "mongodb"
-  url      = "mongodb://localhost:27017/dailyLife"
+  url      = env("MONGO_URL")
 }
 
 model spending {
